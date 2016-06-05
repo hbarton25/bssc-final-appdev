@@ -17,7 +17,7 @@ devise_for :users
 
   # Routes for the Users resource:
   # READ
-  get "/tripnews", :controller => "users", :action => "index"
+  get "/news/:trip_id", :controller => "news", :action => "show"
 
 
 
