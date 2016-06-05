@@ -3,22 +3,32 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
+  <div class="field form-group">
+    <%= f.label :first_name %>
     <%= f.text_field :first_name, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
+  <div class="field form-group">
+    <%= f.label :last_name %>
     <%= f.text_field :last_name, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="field form-group">
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
+    <%= f.label :trip_name %>
+    <%= f.select(:trip_id) do %>
+  <% [['Telluride', 1], ['Whistler', 2]].each do |c| -%>
+    <%= content_tag(:option, c.first, value: c.last) %>
+  <% end %>
+<% end %>
+
+  </div>
+
+  <div class="field form-group">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -26,7 +36,7 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>

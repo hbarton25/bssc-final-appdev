@@ -15,6 +15,11 @@ devise_for :users
   get "/users", :controller => "users", :action => "index"
   get "/users/:id", :controller => "users", :action => "show"
 
+  # Routes for the Users resource:
+  # READ
+  get "/tripnews", :controller => "users", :action => "index"
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

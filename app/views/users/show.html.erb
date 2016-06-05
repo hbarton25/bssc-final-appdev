@@ -11,13 +11,8 @@
 
         <div class="panel-body">
           <ul class="media-list">
-            <li class="media">
-            <div class="media-body">
-              <h5 class="media-heading">
-                HI
-              </h5>
-            </div>
-          </li>
+                <li><%=@users.first_name %> <%= @users.last_name %></li>
+                <li><%= @users.email %></li>
           </ul>
         </div>
 
@@ -36,14 +31,11 @@
 
       <div class="panel-body">
         <ul class="media-list">
-          <li class="media">
-          <div class="media-body">
-            <h5 class="media-heading">
-              HI
-            </h5>
-
-          </div>
-        </li>
+              <li><a href= "/"<i class="fa fa-newspaper-o" aria-hidden="true"></i> Updates from your co-chairs</li>
+              <li><i class="fa fa-calendar" aria-hidden="true"></i> Events schedule</li>
+              <li><i class="fa fa-cutlery" aria-hidden="true"></i></i> Things to do in Telluride</li>
+              <li> <i class="fa fa-sun-o" aria-hidden="true"></i>Weather Report</li>
+              <li><i class="fa fa-bolt" aria-hidden="true"></i> Snow Report</li>
         </ul>
       </div>
     </div>
