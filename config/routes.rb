@@ -13,7 +13,7 @@ devise_for :users
   # Routes for the Users resource:
   # READ
   get "/users", :controller => "users", :action => "index"
-  # get "/users/:id", :controller => "users", :action => "show"
+  get "/users/:id", :controller => "users", :action => "show"
 
 
 
