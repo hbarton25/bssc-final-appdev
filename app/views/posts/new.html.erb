@@ -20,11 +20,11 @@
 
       <!-- Label and input for photo_id -->
       <div class="form-group">
-        <label for="photo_id" class="control-label">
+        <label for="title" class="control-label">
           Title
         </label>
 
-        <input type="text" id="itle" name="post_title" placeholder="Title" class="form-control" value="<%= @post.title %>">
+        <input type="text" id="itle" name="title" placeholder="Title" class="form-control" value="<%= @post.title %>">
       </div>
 
       <!-- Label and input for body -->
@@ -36,14 +36,12 @@
         <textarea id="body" name="body" placeholder="Body" class="form-control" rows="3"><%= @post.body %></textarea>
       </div>
 
-      <!-- Label and input for user_id -->
-      <div class="form-group">
-        <label for="user_id" class="control-label">
-          User
-        </label>
 
-        <input type="text" id="user_id" name="created_by" placeholder="User" class="form-control" value="<%= @post.created_by %>">
-      </div>
+      <!-- Hidden input for user_id -->
+      <input type="hidden"name="user_id" value="<%=current_user.id %>">
+
+      <!-- Hidden input for email -->
+            <input type="hidden"name="email" value="<%=current_user.email %>">
 
       <button class="btn btn-success">
         Create Post

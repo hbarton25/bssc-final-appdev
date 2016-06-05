@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160605194743) do
+ActiveRecord::Schema.define(version: 20160605220221) do
 
   create_table "news", force: :cascade do |t|
     t.date     "create_date"
@@ -25,8 +25,7 @@ ActiveRecord::Schema.define(version: 20160605194743) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.date     "create_date"
-    t.integer  "created_by"
+    t.integer  "user_id"
     t.text     "title"
     t.text     "body"
     t.integer  "trip_id"

@@ -14,13 +14,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new
-    @post.create_date = params[:create_date]
-    @post.created_by = params[:user_id]
+    @post.user_id = params[:user_id]
     @post.title = params[:title]
     @post.body = params[:body]
 
     if @post.save
-      redirect_to :back, :notice => "Post created successfully."
+    redirect_to "/posts", :notice => "Post created successfully."
     else
       render 'new'
     end
@@ -33,8 +32,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    @post.create_date = params[:create_date]
-    @post.created_by = params[:user_id]
+    @post.user_id = params[:user_id]
     @post.title = params[:title]
     @post.body = params[:body]
 
