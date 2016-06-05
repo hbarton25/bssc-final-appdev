@@ -19,6 +19,11 @@
   </div>
 
   <div class="field form-group">
+    <%= f.label :year %>
+    <%= f.select(:year, [['1Y', 1], ['2Y', 2], ['non-student', 3]]) %>
+  </div>
+
+  <div class="field form-group">
     <%= f.label :trip_name %>
     <%= f.select(:trip_id) do %>
   <% [['Telluride', 1], ['Whistler', 2]].each do |c| -%>
