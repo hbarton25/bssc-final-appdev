@@ -46,6 +46,10 @@ float: right;
 width:48%;
 }
 
+.centered {
+  text-align: center;
+}
+
 /* My standard vertical spacing classes */
 
 .padding-inside-top-xs {

@@ -1,11 +1,10 @@
 <body class="mywall-background">
 <h1>Welcome, <%=@users.first_name %> <%= @users.last_name %>!</h1>
 
-  <div class="row">
-  <div class="col-md-offset-1 col-md-4">
-      <div class="panel panel-default">
+
+      <div class="panel panel-default float-left">
         <div class="panel-heading">
-          <h5 class="panel-title"> <a href = "/users/<%= @users.id %>"> My Info </a>
+          <h5 <a href = "/users/<%= @users.id %>"> My Info </a>
           </h5>
         </div>
 
@@ -16,35 +15,26 @@
                 <li><%= @users.year %></li>
           </ul>
         </div>
-
-      </div>
-    </div>
-  </div>
-
-
-<div class="row">
-  <div class="col-md-offset-1 col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h5 class="panel-title"> <a href = "/users/<%= @users.id %>"> Trip Info</a>
-        </h5>
       </div>
 
-      <div class="panel-body">
-        <ul class="media-list">
-              <li>
-                <a href = "/newsfeed/<%= @users.trip_id %>"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Updates from your co-chairs</a></li>
-              <li><i class="fa fa-calendar" aria-hidden="true"></i> Events schedule</li>
-              <li><i class="fa fa-cutlery" aria-hidden="true"></i></i> Things to do in Telluride</li>
-              <li>
-                <a href="https://weather.com/weather/tenday/l/Telluride+CO+USCO0378:1:US"><i class="fa fa-sun-o" aria-hidden="true"></i>Weather Report</a></li>
-              <li>
-                <a href="http://www.tellurideskiresort.com/the-mountain/snow-report/"><i class="fa fa-bolt" aria-hidden="true"></i> Snow Report</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="panel panel-default float-right">
+        <div class="panel-heading">
+          <h5 <a href = "/users/<%= @users.id %>"> Trip Info</a>
+          </h5>
+        </div>
 
+        <div class="panel-body">
+          <ul class="media-list">
+                <li>
+                  <a href = "/newsfeed/<%= @users.trip_id %>"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Updates from your co-chairs</a></li>
+                <li><i class="fa fa-calendar" aria-hidden="true"></i> Events schedule</li>
+                <li><i class="fa fa-cutlery" aria-hidden="true"></i></i> Things to do in Telluride</li>
+                <li>
+                  <a href="https://weather.com/weather/tenday/l/Telluride+CO+USCO0378:1:US"><i class="fa fa-sun-o" aria-hidden="true"></i>Weather Report</a></li>
+                <li>
+                  <a href="http://www.tellurideskiresort.com/the-mountain/snow-report/"><i class="fa fa-bolt" aria-hidden="true"></i> Snow Report</a></li>
+          </ul>
+        </div>
+      </div>
 
 </body>

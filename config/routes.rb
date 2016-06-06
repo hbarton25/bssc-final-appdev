@@ -38,6 +38,22 @@ post "/update_post/:id", :controller => "posts", :action => "update"
 # DELETE
 get "/delete_post/:id", :controller => "posts", :action => "destroy"
 
+# Routes for the Comment resource:
+  # CREATE
+  get "/comments/new", :controller => "comments", :action => "new"
+  post "/create_comment", :controller => "comments", :action => "create"
+
+  # READ
+  get "/comments", :controller => "comments", :action => "index"
+  get "/comments/:id", :controller => "comments", :action => "show"
+
+  # UPDATE
+  get "/comments/:id/edit", :controller => "comments", :action => "edit"
+  post "/update_comment/:id", :controller => "comments", :action => "update"
+
+  # DELETE
+  get "/delete_comment/:id", :controller => "comments", :action => "destroy"
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
