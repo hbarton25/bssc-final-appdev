@@ -23,8 +23,11 @@
         <td><%= post.body %></td>
         <td>
           <a href="/posts/<%= post.id %>" class="btn btn-primary">Show</a>
+          <% if current_user == post.user %>
           <a href="/posts/<%= post.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_post/<%= post.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <% else %>
+          <% end %>
         </td>
       </tr>
       <% end %>

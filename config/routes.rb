@@ -20,7 +20,7 @@ devise_for :users
 
   # Routes for the Trips resource:
   # READ
-get "/:name/newsfeed", :controller => "trips", :action => "newsfeed"
+get "/newsfeed/:id", :controller => "trips", :action => "newsfeed"
 
 # Routes for the Posts resource:
 # CREATE

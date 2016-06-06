@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new
     @post.user_id = params[:user_id]
+    @post.trip_id = params[:trip_id]
     @post.title = params[:title]
     @post.body = params[:body]
 
@@ -34,6 +35,7 @@ class PostsController < ApplicationController
 
     @post.user_id = params[:user_id]
     @post.title = params[:title]
+    @post.trip_id = params[:trip_id]
     @post.body = params[:body]
 
     if @post.save
@@ -48,6 +50,6 @@ class PostsController < ApplicationController
 
     @post.destroy
 
-    redirect_to :back, :notice => "Post deleted."
+    redirect_to "/posts", :notice => "Post deleted."
   end
 end
