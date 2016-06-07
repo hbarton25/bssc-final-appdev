@@ -1,44 +1,7 @@
 Rails.application.routes.draw do
 
-root "home#index"
 
-
-
-  # Routes for the Home resource:
-  get "/home", :controller => "home", :action => "index"
-  get "/overview", :controller => "home", :action => "overview"
-  get "/about", :controller => "home", :action => "about"
-
-#users
-devise_for :users
-
-  # Routes for the Users resource:
-  # READ
-  get "/users", :controller => "users", :action => "index"
-  get "/users/:id", :controller => "users", :action => "show"
-
-
-  # Routes for the Trips resource:
-  # READ
-get "/newsfeed/:id", :controller => "trips", :action => "newsfeed"
-
-# Routes for the Posts resource:
-# CREATE
-get "/posts/new", :controller => "posts", :action => "new"
-post "/create_post", :controller => "posts", :action => "create"
-
-# READ
-get "/posts", :controller => "posts", :action => "index"
-get "/posts/:id", :controller => "posts", :action => "show"
-
-# UPDATE
-get "/posts/:id/edit", :controller => "posts", :action => "edit"
-post "/update_post/:id", :controller => "posts", :action => "update"
-
-# DELETE
-get "/delete_post/:id", :controller => "posts", :action => "destroy"
-
-# Routes for the Comment resource:
+  # Routes for the Comment resource:
   # CREATE
   get "/comments/new", :controller => "comments", :action => "new"
   post "/create_comment", :controller => "comments", :action => "create"
@@ -53,6 +16,43 @@ get "/delete_post/:id", :controller => "posts", :action => "destroy"
 
   # DELETE
   get "/delete_comment/:id", :controller => "comments", :action => "destroy"
+
+  # Routes for the Home resource:
+  get "/home", :controller => "home", :action => "index"
+  get "/overview", :controller => "home", :action => "overview"
+  get "/about", :controller => "home", :action => "about"
+
+  #users
+  root "home#index"
+  devise_for :users
+
+  # Routes for the Users resource:
+  # READ
+  get "/users", :controller => "users", :action => "index"
+  get "/users/:id", :controller => "users", :action => "show"
+
+
+  # Routes for the Trips resource:
+  # READ
+  get "/newsfeed/:id", :controller => "trips", :action => "newsfeed"
+
+  # Routes for the Posts resource:
+  # CREATE
+  get "/posts/new", :controller => "posts", :action => "new"
+  post "/create_post", :controller => "posts", :action => "create"
+
+  # READ
+  get "/posts", :controller => "posts", :action => "index"
+  get "/posts/:id", :controller => "posts", :action => "show"
+
+  # UPDATE
+  get "/posts/:id/edit", :controller => "posts", :action => "edit"
+  post "/update_post/:id", :controller => "posts", :action => "update"
+
+  # DELETE
+  get "/delete_post/:id", :controller => "posts", :action => "destroy"
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -27,12 +27,11 @@
 padding-top: 30px;
  }
 
-.mywall-background {
-background: url(../images/main-hero.jpg) no-repeat center center fixed;
-/*-webkit-background-size: cover;
--moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;*/
+.about-image {
+repeat: no-repeat;
+position: center;
+opacity: 0.4;
+filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
 

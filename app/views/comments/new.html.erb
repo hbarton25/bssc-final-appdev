@@ -36,7 +36,9 @@
 
           <input type="hidden" id="post_id" name="post_id" value="<%= @comment.post_id %>">
 
-          <input type="hidden" id="user_id" name="user_id" value="<%= current_user.id %>">
+          <input type="hidden" id="user_id" name="user_id" value="<%= @comment.user_id %>">
+
+          <!-- Label and input for user_id -->
 
           <div class="form-group">
             <button class="btn btn-success btn-block">

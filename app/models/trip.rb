@@ -6,5 +6,6 @@ has_many :posts
 has_many :participants, :through => :registrations, :source => :user_id
 has_many :registrations
 has_many :comments
+has_many :users
 
 end

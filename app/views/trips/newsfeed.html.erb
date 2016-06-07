@@ -48,8 +48,8 @@
             <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
             <input type="text" id="body" name="body" placeholder="Add a comment..." class="form-control" required="">
             <% post.comments.each do |comment| %>
-            <input type="hidden" name="post_id" value="<%= comment.post_id %>">
-            <input type="hidden" name="user_id" value="<%= comment.user_id %>">
+            <input type="hidden" name="post_id" value="<%= comment.post.id %>">
+                <input type="hidden" name="user_id" value="<%= comment.user.id %>">
             <% end %>
           </form>
 </div>
