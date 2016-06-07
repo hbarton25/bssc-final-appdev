@@ -48,6 +48,12 @@
    max-height: 300px;
 }
 
+.cochair-image{
+   height: auto;
+   width: auto;
+   max-width: 500px;
+   max-height: 500px;
+}
 
  .padding-top {
 padding-top: 30px;
