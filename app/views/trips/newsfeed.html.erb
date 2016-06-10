@@ -2,7 +2,7 @@
 <h1 class="centered">Telluride Updates</h1>
 
 <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-8 col-md-offset-2 padding-inside-bottom-md">
     <% if current_user.admin == true %>
     <a href="/posts/new" class="btn btn-default btn-block">
       <i class="fa fa-plus"></i>
@@ -33,9 +33,9 @@
   <% post.comments.each do |comment| %>
           <li class="media">
         <div class="media-body">
-          <h5 class="media-heading">
+          <h6 class="media-heading">
             <a href = "/users/<%= comment.user.id %>"> <%= comment.user.first_name %></a> <small> <%= time_ago_in_words(comment.created_at) %></small>
-          </h5>
+          </h6>
           <p><small><%= comment.body %></small></p>
         </div>
       </li>
@@ -62,6 +62,9 @@
   Manage Posts</a>
   <% else %>
   <% end %>
+
+  <a href="/comments/" class="btn btn-default btn-block">
+  Manage Comments</a>
 
 </div>
 </div>
